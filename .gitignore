@@ -21,13 +21,6 @@ checkpoints/
 *.pth
 *.pt
 
-# Generated samples and FID outputs
-samples/*
-!samples/*.png        # allow sample PNGs to be committed
-generated/
-fid_fake/
-fid_real/
-
 # TensorBoard / Lightning logs
 tb_logs/
 lightning_logs/
