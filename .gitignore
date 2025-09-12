@@ -10,7 +10,7 @@ __pycache__/
 .venv/
 venv/
 env/
-gans/       
+gans/        # your custom venv name
 .gans_env/
 
 # IDE/editor settings
@@ -26,7 +26,8 @@ checkpoints/
 *.pt
 
 # Generated samples and FID outputs
-samples/
+samples/*
+!samples/*.png        # allow sample PNGs to be committed
 generated/
 fid_fake/
 fid_real/
@@ -40,6 +41,7 @@ data/
 *.zip
 *.tar
 *.gz
+data/images_resized/
 
 # OS-specific junk
 .DS_Store
