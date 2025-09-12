@@ -100,7 +100,7 @@ Using FID
 
 Generate fake images:
 ```bash
-python generate_for_fid.py --ckpt checkpoints/epoch-epoch=049.ckpt --real_dir data/images --out generated
+python generate_for_fid.py --ckpt checkpoints/epoch=049.ckpt --real_dir data/images --out generated
 ```
 
 Run FID:
