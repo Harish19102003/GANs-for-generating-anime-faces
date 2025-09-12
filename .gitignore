@@ -1,1 +1,46 @@
-gans/
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.log
+
+# Virtual environments
+.venv/
+venv/
+env/
+gans/       
+.gans_env/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Checkpoints and weights
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# Generated samples and FID outputs
+samples/
+generated/
+fid_fake/
+fid_real/
+
+# TensorBoard / Lightning logs
+tb_logs/
+lightning_logs/
+
+# Data (large dataset, don't commit)
+data/
+*.zip
+*.tar
+*.gz
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
