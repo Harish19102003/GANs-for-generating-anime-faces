@@ -82,7 +82,7 @@ python gan_anime_faces.py --data_dir data/images --use_self_attention --use_spec
 ```bash
 python gan_anime_faces.py --data_dir data/images --compute_fid
 ```
-## 4. View Results
+## View Results
 
 Generated images → samples/
 
@@ -90,7 +90,7 @@ Real samples → samples/real_images.png
 
 TensorBoard logs → tb_logs/
 
-Run:
+## Run:
 ```bash
 tensorboard --logdir tb_logs
 ```
@@ -98,19 +98,19 @@ tensorboard --logdir tb_logs
 # Evaluation
 Using FID
 
-Generate fake images:
+## Generate fake images:
 ```bash
 python generate_for_fid.py --ckpt checkpoints/epoch=049.ckpt --real_dir data/images --out generated
 ```
 
-Run FID:
+## Run FID:
 ```bash
 pytorch-fid data/images_resized generated
 ```
 # Report Section
-Training Setup
+## Training Setup
 
-Dataset: Anime Face Dataset (Kaggle)
+Dataset: Anime Face Dataset [Kaggle](https://www.kaggle.com/splcher/animefacedataset)
 
 Image size: 64×64
 
@@ -122,7 +122,7 @@ Optimizer: Adam (lr=0.0002, β1=0.5)
 
 Epochs: 50
 
-Model variants tested:
+## Model variants tested:
 
 DCGAN baseline
 
@@ -134,9 +134,9 @@ Spectral Norm
 
 Results at Epoch 49
 
-FID score: 51.94
+***FID score: 51.94***
 
-Samples:
+## Samples:
 
 samples/epoch_000.png → noisy blobs (untrained generator)
 
@@ -146,7 +146,7 @@ samples/epoch_030.png → recognizable anime faces
 
 samples/epoch_049.png → clearer faces, some artifacts remain
 
-Observations
+## Observations
 
 Training was stable with DCGAN setup.
 
@@ -156,7 +156,7 @@ FID ~52 indicates moderate quality (faces are recognizable but not sharp).
 
 Adding WGAN-GP + self-attention may further improve quality.
 
-Challenges
+## Challenges
 
 Mode collapse risk (generator repeating similar faces).
 
@@ -164,7 +164,7 @@ Dataset has small resolution (64×64), limiting detail.
 
 FID calculation failed initially due to inconsistent image sizes → fixed by resizing all real images.
 
-Future Work
+## Future Work
 
 Train longer (100–200 epochs).
 
