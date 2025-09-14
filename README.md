@@ -38,7 +38,7 @@ We train a GAN on the **Anime Face Dataset** (Kaggle) to generate realistic anim
 ```
 GANs-for-generating-anime-faces/
 ├── gan_anime_faces.py     # Main GAN training script
-├── README.md              # Documentation + Report (this file)
+├── README.md              # Documentation + Report 
 ├── requirements.txt       # Dependencies
 ├── .gitignore             # Ignore cache/checkpoint/log files
 ├── samples/               # Saved real + generated images per epoch
@@ -50,7 +50,7 @@ GANs-for-generating-anime-faces/
 
 ##  Usage
 
-### 1. Install Dependencies
+### Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
@@ -80,7 +80,7 @@ python gan_anime_faces.py --data_dir data/images --use_self_attention --use_spec
 
 ## With FID:
 ```bash
-python gan_anime_faces.py --data_dir data/images --compute_fid
+python gan_anime_faces.py --data_dir data/images --compute_fid --gpus 1
 ```
 ## View Results
 
@@ -100,7 +100,7 @@ Using FID
 
 ## Generate fake images:
 ```bash
-python generate_for_fid.py --ckpt checkpoints/epoch=049.ckpt --real_dir data/images --out generated
+python generate_for_fid.py --ckpt checkpoints/epoch-049.ckpt --real_dir data/images --out generated
 ```
 
 ## Run FID:
@@ -110,7 +110,7 @@ pytorch-fid data/images_resized generated
 # Report Section
 ## Training Setup
 
-Dataset: Anime Face Dataset [Kaggle](https://www.kaggle.com/splcher/animefacedataset)
+Dataset: [Anime Face Dataset Kaggle](https://www.kaggle.com/splcher/animefacedataset)
 
 Image size: 64×64
 
