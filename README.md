@@ -52,6 +52,8 @@ GANs-for-generating-anime-faces/
 
 ### Install Dependencies
 ```bash
+git clone https://github.com/Harish19102003/GANs-for-generating-anime-faces.git
+cd GANs-for-generating-anime-faces
 pip install -r requirements.txt
 ```
 
